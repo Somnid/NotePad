@@ -1,0 +1,4 @@
+-fix root level dbc bug
+-remove files size from folders
+-cache last known path for open and save
+-add download ability (name based on last path if exists)

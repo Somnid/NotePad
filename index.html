@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>Notepad</title>
+		<link rel="stylesheet" href="css/index.css"></link>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	</head>
+	<body>
+		<nav>
+			<button class="menu-icon" id="load"></button>
+			<button class="menu-icon" id="save"></button>
+			<button id="clear">Clear</button>
+			<!--<button id="force-auth">Force Auth</button>-->
+		</nav>
+		<textarea id="text"></textarea>
+		<div id="location"></div>
+		<script src="config/creds.js"></script>
+		<script src="js/lib/util.js"></script>
+		<script src="js/lib/dom.js"></script>
+		<script src="js/lib/ajax.js"></script>
+		<script src="js/lib/crypto-sha1-hmac.js"></script>
+		<script src="js/lib/oauth.js"></script>
+		<script src="js/lib/dropbox.js"></script>
+		<script src="js/lib/dropboxconnector.js"></script>
+		<script src="js/lib/saved-field.js"></script>
+		
+		<script src="js/views/lightbox-view.js"></script>
+		<script src="js/dropbox-ui/open-dialog.js"></script>
+		<script src="js/dropbox-ui/save-dialog.js"></script>
+		
+		<script src="js/views/notepad-app.js"></script>
+		<script src="js/index.js"></script>
+		
+		<template id="save-tmpl">
+			<div id="save-dialog">
+				<form>
+					<input type="text" id="save-file-name" placeholder="file.txt" />
+					<button id="save-file">Save</button>
+					<button id="up-directory">Up</button>
+				</form>
+				<ul class="file-list">
+				</ul>
+			</div>
+		</template>
+		<template id="open-tmpl">
+			<div id="open-dialog">
+				<form>
+					<input type="text" id="open-file-name" placeholder="file.txt" />
+					<button id="open-file">Open</button>
+					<button id="up-directory">Up</button>
+				</form>
+				<ul class="file-list">
+				</ul>
+			</div>
+		</template>
+		<template id="file-tmpl">
+			<li>
+				<a class="name"></a>
+				<span class="size"></span>
+			</li>
+		</template>
+	</body>
+</html>
